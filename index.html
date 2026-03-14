@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supraja PB | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--bg); color: var(--text); line-height: 1.6; }
+
+        /* --- Animated Landing --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: left;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            max-width: 1100px;
+        }
+
+        .profile-img {
+            width: 350px;
+            height: auto;
+            border-radius: 4px;
+            filter: grayscale(100%);
+            transition: 0.5s ease;
+        }
+        .profile-img:hover { filter: grayscale(0%); }
+
+        .hero-text h1 { font-size: 4.5rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1; }
+        .hero-text p { font-size: 1.5rem; font-weight: 300; letter-spacing: 2px; color: var(--accent); }
+
+        /* --- Sections --- */
+        .content-section { padding: 100px 10%; }
+        .project-card { margin-bottom: 150px; }
+        .project-title { font-size: 2.5rem; margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .tag-container { margin-bottom: 1rem; }
+        .tag { font-size: 0.8rem; background: #f0f0f0; padding: 4px 12px; border-radius: 20px; margin-right: 8px; }
+
+        /* --- Animations --- */
+        [data-aos] { transition-duration: 1000ms; }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-container">
+            <img src="profile.png" alt="Supraja PB" class="profile-img" data-aos="fade-right">
+            <div class="hero-text" data-aos="fade-up">
+                <h1>Supraja PB</h1>
+                <p>Industrial Design Student</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="project-card" data-aos="fade-up">
+            <h2 class="project-title">01. Folda</h2>
+            <div class="grid">
+                <div>
+                    <div class="tag-container">
+                        <span class="tag">Furniture</span><span class="tag">User Research</span>
+                    </div>
+                    <p>Designed to solve workspace organization and storage issues for artists and students[cite: 2]. Folda addresses poor ergonomics and lack of portability found in traditional tables[cite: 24, 29].</p>
+                    <ul style="margin-top: 20px; padding-left: 20px;">
+                        <li>Modular storage solutions [cite: 31]</li>
+                        <li>Ergonomic posture support [cite: 21]</li>
+                        <li>Portable "Folda" mechanism </li>
+                    </ul>
+                </div>
+                <div style="background: #f9f9f9; height: 300px; display: flex; align-items: center; justify-content: center; color: #999;">
+                    [Image: Portable Table Prototype]
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up">
+            <h2 class="project-title">02. Toucan Lighting</h2>
+            <div class="grid">
+                <div style="background: #f9f9f9; height: 300px; display: flex; align-items: center; justify-content: center; color: #999;">
+                    [Image: Lighting Fixture]
+                </div>
+                <div>
+                    <div class="tag-container">
+                        <span class="tag">Biomimicry</span><span class="tag">Prototyping</span>
+                    </div>
+                    <p>A functional lighting fixture inspired by the form and balance of a Toucan. Focuses on organic shapes and adjustable mechanisms[cite: 43].</p>
+                    <ul style="margin-top: 20px; padding-left: 20px;">
+                        <li>Scissor-mechanism height adjustment [cite: 46]</li>
+                        <li>Refined beak-inspired shapes [cite: 50]</li>
+                        <li>Sculptural asymmetrical form [cite: 45]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        AOS.init({ once: true });
+    </script>
+</body>
+</html>
